@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-clr: rgb(43, 141, 238);
+}
+
+body,
+html {
+  width: 100svw;
+  height: 100svh;
+  margin: 0;
+  font-family: "Inter", "sans-serif";
+  background-color: rgb(25, 26, 31);
+  font-size: 14px;
+  header {
+    background-color: rgba(10, 12, 16, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100svw;
+    border-bottom: 1px solid rgb(30, 41, 59);
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      max-width: 1280px;
+      width: 100%;
+      padding: 1em;
+      margin: auto;
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin-right: 1em;
+        .icon {
+          color: white;
+          background: var(--blue-clr);
+          padding: 0.2em;
+          aspect-ratio: 1;
+          align-self: center;
+          border-radius: 5px;
+          margin-right: 0.4em;
+        }
+        .text {
+          font-weight: 900;
+          color: white;
+          font-size: 1.4rem;
+        }
+      }
+      nav {
+        display: flex;
+        gap: 2.5em;
+        align-items: center;
+        justify-content: center;
+        a {
+          color: white;
+          text-decoration: none;
+          text-align: center;
+          &:hover {
+            color: var(--blue-clr);
+          }
+        }
+      }
+      .auth-buttons {
+        justify-self: center;
+        button {
+          font-weight: 700;
+          color: #fff;
+          border: none;
+          font-size: 1rem;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .log-in {
+          background: none;
+          margin-right: 0.3em;
+        }
+        .get-access {
+          background-color: var(--blue-clr);
+          border-radius: 6px;
+          padding: 0.6em 1.5em;
+        }
+      }
+    }
+  }
+}
