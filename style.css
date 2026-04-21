@@ -9,12 +9,14 @@
 body,
 html {
   width: 100svw;
-  height: 100svh;
+  height: 200svh;
   margin: 0;
   font-family: "Inter", "sans-serif";
   background-color: rgb(25, 26, 31);
   font-size: 14px;
   header {
+    position: sticky;
+    top: 0;
     background-color: rgba(10, 12, 16, 0.8);
     display: flex;
     justify-content: center;
