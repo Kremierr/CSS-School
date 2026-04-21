@@ -8,6 +8,7 @@
 
 body,
 html {
+  overflow-x: hidden;
   width: 100svw;
   height: 200svh;
   margin: 0;
@@ -29,7 +30,7 @@ html {
       height: 100%;
       max-width: 1280px;
       width: 100%;
-      padding: 1em;
+      padding: 1em 2em;
       margin: auto;
       .logo {
         display: flex;
@@ -57,6 +58,12 @@ html {
         gap: 2.5em;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 768px) {
+          & {
+            display: none;
+          }
+        }
         a {
           color: white;
           text-decoration: none;
