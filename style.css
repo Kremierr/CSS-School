@@ -110,9 +110,6 @@ html {
   main {
     margin: 0;
     position: relative;
-    h1 {
-      margin: 0;
-    }
     .decorations {
       opacity: 0.3;
       z-index: -1;
@@ -192,6 +189,7 @@ html {
             }
           }
           .hero-text {
+            margin: 0;
             font-size: 4.5rem;
             font-weight: 900;
             line-height: 1;
@@ -395,6 +393,50 @@ html {
               .comment {
                 color: rgb(148, 163, 184);
               }
+            }
+          }
+        }
+      }
+    }
+    .stats {
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      border-color: rgb(30 41 59);
+      background-color: rgb(15 23 42 / 0.3);
+      .stats-div {
+        max-width: 80rem;
+        margin-inline: auto;
+        padding: 3rem 1.5rem;
+        .stats-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          .stat-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            align-items: center;
+            .value {
+              font-size: 1.875rem;
+              font-weight: 900;
+              color: white;
+              @media (min-width: 768px) {
+                font-size: 2.25rem;
+              }
+            }
+            .stat {
+              font-size: 0.875rem;
+              font-weight: 500;
+              color: rgb(148, 163, 184);
+              letter-spacing: 0.1em;
+            }
+          }
+          @media (min-width: 1024px) {
+            & {
+              grid-template-columns: repeat(4, 1fr);
+            }
+            .stat-container {
+              align-items: flex-start;
             }
           }
         }
