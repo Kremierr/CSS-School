@@ -743,6 +743,154 @@ html {
         }
       }
     }
+    .discord-section {
+      padding: 6rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+      .discord-section-container {
+        max-width: 896px;
+        margin-inline: auto;
+        .container {
+          position: relative;
+          background: rgba(255, 255, 255, 0.03);
+          backdrop-filter: blur(12px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 1.5rem;
+          padding: 2rem;
+          overflow: hidden;
+          .chat-icon-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2rem;
+            color: rgb(from var(--primary) r g b / 0.1);
+            user-select: none;
+            span {
+              font-size: 180px;
+            }
+          }
+          .inner-container {
+            position: relative;
+            z-index: 10;
+            .discord-header {
+              display: flex;
+              align-content: center;
+              gap: 1rem;
+              margin-bottom: 2rem;
+              .discord-icon-container {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 1rem;
+                background-color: #5865f2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                box-shadow:
+                  0 10px 15px -3px rgb(0 0 0 / 0.1),
+                  0 4px 6px -4px rgb(0 0 0 / 0.1);
+                svg {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                }
+              }
+              .text-container {
+                display: flex;
+                flex-direction: column;
+                h2 {
+                  margin: 0;
+                  font-size: 1.875rem;
+                  font-weight: 900;
+                  color: white;
+                }
+                .online-now {
+                  display: flex;
+                  align-items: center;
+                  gap: 0.5rem;
+                  font-weight: 700;
+                  font-size: 0.875rem;
+                  color: rgb(16 185 129);
+                  .dot {
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    background-color: rgb(16 185 129);
+                    border-radius: 9999px;
+                    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+                  }
+                }
+              }
+            }
+            p {
+              font-size: 1.125rem;
+              color: rgb(148 163 184);
+              margin: 0;
+              margin-bottom: 2rem;
+              max-width: 36rem;
+              line-height: 1.75rem;
+            }
+            .button-container {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              button {
+                background-color: #5865f2;
+                color: white;
+                padding: 1rem 2rem;
+                border-radius: 0.75rem;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0 20px 25px -5px rgb(99 102 241 / 0.2);
+                font-family: inherit;
+                font-size: inherit;
+                &:hover {
+                  background-color: #4752c4;
+                }
+              }
+              .members-pfps-container {
+                display: flex;
+                align-items: center;
+                .member-pfp {
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  border-radius: 9999px;
+                  border-width: 2px;
+                  border-color: #0a0c10;
+                  background-color: rgb(100 116 139);
+                  margin-left: -0.75rem;
+                  background-size: cover;
+                  background-position: center;
+                  &:first-child {
+                    margin-left: 0.5rem;
+                    background-image: url(pfp1.png);
+                  }
+                  &:nth-child(2) {
+                    background-image: url(pfp2.png);
+                  }
+                  &:nth-child(3) {
+                    background-image: url(pfp3.png);
+                  }
+                }
+                span {
+                  padding-left: 1.25rem;
+                  font-size: 0.875rem;
+                  font-weight: 700;
+                  color: rgb(100 116 139);
+                  margin-left: -0.75rem;
+                }
+              }
+            }
+          }
+          @media (min-width: 768px) {
+            & {
+              padding: 3rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -751,5 +899,14 @@ html {
   100% {
     transform: scale(2);
     opacity: 0;
+  }
+}
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }
