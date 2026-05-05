@@ -13,7 +13,6 @@ body {
 body,
 html {
   width: 100svw;
-  height: 4258px;
   margin: 0;
   font-family: "Inter", sans-serif;
   background-color: rgb(10, 12, 16);
@@ -847,6 +846,8 @@ html {
                 box-shadow: 0 20px 25px -5px rgb(99 102 241 / 0.2);
                 font-family: inherit;
                 font-size: inherit;
+                cursor: pointer;
+                border: none;
                 &:hover {
                   background-color: #4752c4;
                 }
@@ -957,6 +958,7 @@ html {
               transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
               line-height: 1.75rem;
               font-family: "Inter", sans-serif;
+              cursor: pointer;
               &:hover {
                 background-color: rgb(from var(--primary) r g b / 0.9);
                 transform: scale(1.05);
@@ -988,6 +990,118 @@ html {
       }
     }
   }
+  footer {
+    background-color: #0a0c10;
+    border-top: 1px solid rgb(30 41 59);
+    padding: 4rem 1.5rem;
+    .footer-div {
+      max-width: 1280px;
+      margin-inline: auto;
+      .upper-footer {
+        display: grid;
+        gap: 3rem;
+        margin-bottom: 3rem;
+        grid-template-columns: repeat(1, 1fr);
+        .first-column {
+          grid-column: span 1;
+          .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            .icon {
+              width: 2rem;
+              height: 2rem;
+              background-color: var(--primary);
+              border-radius: 0.25rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              span {
+                font-size: 1.25rem;
+              }
+            }
+            h1 {
+              margin: 0;
+              font-size: 1.25rem;
+              font-weight: 900;
+              letter-spacing: -0.025em;
+            }
+          }
+          p {
+            max-width: 24rem;
+            color: #94a3b8;
+          }
+        }
+        .column {
+          h4 {
+            margin: 0;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+          }
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            flex-direction: column;
+            display: flex;
+            gap: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            color: #94a3b8;
+            a {
+              text-decoration: none;
+              color: #fff;
+              transition: color 0.15 ease-in-out;
+              color: inherit;
+              &:hover {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+      .lower-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding-top: 3rem;
+        border-top: 1px solid #1e293b;
+        justify-content: space-between;
+        p {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          color: #94a3b8;
+        }
+        .icons-container {
+          display: flex;
+          gap: 1.5rem;
+          a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover {
+              color: var(--primary);
+            }
+          }
+        }
+      }
+      @media (min-width: 768px) {
+        .upper-footer {
+          grid-template-columns: repeat(4, 1fr);
+          .first-column {
+            grid-column: span 2;
+          }
+        }
+        .lower-footer {
+          flex-direction: row;
+        }
+      }
+    }
+  }
 }
 
 @keyframes ping {
@@ -1006,5 +1120,3 @@ html {
     opacity: 0.5;
   }
 }
-
-/*After completing CSS School, create a repository in programowanie*/
